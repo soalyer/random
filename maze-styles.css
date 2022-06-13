@@ -1,0 +1,42 @@
+html {
+    box-sizing: border-box;
+    background-color:#F5E3E0;
+    font-size: 5vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+.outline {
+    margin: 0;
+    width: 55vw;
+    height: 200vh;
+    display: flex;
+    background-color: #E8B4BC;
+    justify-content: center;
+}
+.main {
+    margin: 0;
+    width: 50vw;
+    height: 200vh;
+    background-color: #D282A6;
+    text-align: center;
+}
+
+h1 {
+    font-size: min(10vh,10vw);
+    color: #41232e;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin-bottom: 0;
+}
+
+button {
+    font-size: min(3vh,3vw);
+    background-color:#F5E3E0;
+    color: #41232e; 
+}
