@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="buffon-styles.css">
+    <script defer src="buffon-script.js"></script>
+</head>
+<body>
+    <h1>Buffon's Needle</h1>
+    <button onclick="dropLine(1)">Drop 1 Needle</button> <br><br>
+    <button onclick="dropLine(1000)">Drop 1000 Needles</button> <br><br>
+    <button onclick="reset()">Reset</button> <br>
+    <p>
+        # Dropped:  <span id="drops" style="color:#F18701">0</span> <br>
+        # Touching Line: <span id="hits" style="color:#F7B801">0</span>
+    </p>
+   <p>
+    𝝅 = 
+    <span id="drops-1" style="color:#F18701">0</span> 
+    / 
+    <span id="hits-1" style="color:#F7B801">0</span>
+
+   </p>
+   <h1 id="pi" style="color: #b7b8ff; margin-top: -5vmin;">= 0</h1>
+   <canvas id="canvas"></canvas>
+</body>
+</html>
