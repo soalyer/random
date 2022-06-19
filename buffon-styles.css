@@ -20,6 +20,16 @@ button {
     border: none;
 }
 
+input {
+    background-color: #bcbdd4;
+    color: #6365db;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 2rem;
+    border: none;
+    width: 10rem;
+    margin-left: 0.5rem;
+}
+
 button:hover {
     background-color: #5a5ccf;
 }
@@ -30,6 +40,11 @@ p {
     font-size: 3rem;
 }
 
+div {
+    color: #b7b8ff;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 1rem;
+}
 canvas {
     width: 60vw;
     height: 100vh;
