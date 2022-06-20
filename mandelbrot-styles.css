@@ -1,0 +1,36 @@
+html {
+    background-color: #0D0449;
+    font-size: 2vh;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+h1, p, button {
+    position: absolute;
+    color:white;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2rem;
+}
+p {
+    margin-top: 6rem;
+    font-size: 1rem;
+}
+
+button {
+    background-color: dimgray;
+    margin-top: 8rem;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+#more {
+    margin-top: 10rem;
+}
+#mandelbrot {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+
+}
