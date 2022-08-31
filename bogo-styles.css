@@ -1,0 +1,81 @@
+
+body {
+    background-color: #CEA2AC;
+
+}
+
+#title {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    text-align: center;
+    font-size: 5vw;
+    font-family: 'Rubik', sans-serif;
+    color:#25283D;
+}
+
+input, label {
+    left: 15vmax;
+    width: 9vmax;
+    position: absolute;
+    font-family: 'Rubik', sans-serif;
+    color:#25283D;
+    text-align: center;
+}
+
+
+label {
+    font-size: 2vmax;
+    top: 15vw;  
+}
+
+input {
+    top: 18vw;
+    height: 9vmax;  
+    color:#25283D;
+    background-color: #DCB0BA;
+    border: none;  
+    font-size: 6vmax;
+    text-size-adjust: auto;
+}
+
+@media only screen and (orientation: portrait) {
+    input, label {
+        left: 5vw;
+    }
+    label {
+        top: 50vh;
+    }
+    input {
+        top: 53vh;
+    }
+}
+
+#canvas {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vmax;
+    height: auto;
+}
+
+#buttons-container {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin-top: 2vh;
+    margin-left: 1vmax;
+    margin-right: 1vmax;
+    width: 24vmax;
+    height: 5vmax;
+    font-size: 3vmax;
+    font-family: 'Rubik', sans-serif;
+    color:#25283D;
+    background-color: #DCB0BA;
+    border: none;
+}
+
+button:hover {
+    background-color: rgb(167, 128, 136);
+}
