@@ -44,18 +44,21 @@ function populate() {
     
     let t = ""
     if (level < 3) {
+        document.documentElement.style.fontSize = "min(16px,4vw)";
         size = 3;
         let ind = Math.floor(Math.random()*misc.length);
         t = misc[ind];
         misc.splice(ind,1);
     }
     else if (level < 6) {
+        document.documentElement.style.fontSize = "min(16px,3vw)";
         size = 6;
         let ind = Math.floor(Math.random()*color.length);
         t = color[ind];
         color.splice(ind,1);
     }
     else if (level < 9) {
+        document.documentElement.style.fontSize = "min(16px,2vw)";
         size = 9;
         let ind = Math.floor(Math.random()*color.length);
         t = faces[ind];
