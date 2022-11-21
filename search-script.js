@@ -1,8 +1,8 @@
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext('2d');
 
-ctx.canvas.width  = window.innerWidth;
-ctx.canvas.height = window.innerHeight * 0.84;
+ctx.canvas.width  = document.documentElement.clientHeight;
+ctx.canvas.height = document.documentElement.clientHeight * 0.84;
 
 const draw_speed = 10;
 const size = Math.floor(canvas.height / 12);
