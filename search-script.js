@@ -55,6 +55,7 @@ addEventListener('touchend', md);
 
 function md(e) {
     mouse = true;
+    mm(e);
 }
 function mu(e) {
     mouse = false;
@@ -70,7 +71,10 @@ let old_my = 0;
 function mm(e) {
     mx = Math.floor(e.pageX / size);
     my = Math.floor((e.pageY - (window.innerHeight * 0.16)) / size);
-    if (!mouse) return;
+    if (!mouse) {
+        old_mx = 0;
+        return;
+    }
 
     if (old_my == my && old_mx == mx) return;
     old_my = my;
