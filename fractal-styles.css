@@ -1,0 +1,148 @@
+html {
+    box-sizing: border-box;
+    background-color:rgb(204, 41, 41);
+    overflow-y: hidden;
+}
+
+body {
+    margin: 0;
+    display: flex;
+}
+
+h1 {
+    margin: 0;
+    padding: 2rem;
+    padding-bottom: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    text-align: center;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+#sidebar {
+    color: white;
+    height: 100vh;
+    width: 30vw;
+    overflow-x: hidden;
+    background-image: url("bg.jpg");
+    background-color: black;
+    background-size: cover;
+    box-shadow: 5px 0px 15px 5px #000000;
+    z-index: 1;
+
+    animation: 1s cubic-bezier(0,.66,.66,1) movein;
+}
+
+@keyframes movein {
+    from {
+        margin-left: -30vw;
+    }
+    to {
+        margin-left: 0vw;
+    }
+}
+
+.sidebar-text {
+    height: 70vh;
+}
+
+.sidebar-next-previous, .sidebar-skip {
+    height: 10vh;
+    display: flex;
+    gap: 5vw;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sidebar-next-previous {
+    height: 20vh;
+}
+button {
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2vw;
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+    height: 10vh;
+    width: 100%;
+    outline: white;
+
+    border: 2px solid rgba(255,255,255,0.3);;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.1);
+
+}
+
+.sidebar-next-previous button {
+    height: 8vh;
+    width: 8vh;
+    border-radius: 50%;
+}
+
+.sidebar-skip button {
+    background-color: rgba(255, 106, 106, 0.2);
+    border: none;
+}
+
+.sidebar-skip button:hover {
+    background-color: rgba(255, 106, 106, 0.3);
+}
+
+.main {
+    background-color: rgb(204, 41, 41);
+
+    height: 100vh;
+    width: 70vw;
+    margin-left: 30vw;
+    position: fixed;
+}
+
+#buttons-list {
+    height: 100%;
+}
+#buttons-list input {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 5rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    color: white;
+}
+#buttons-list div {
+    height: 10rem;
+    border-top: 0.1rem solid white;
+    border-left: 0.1rem solid white;
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100vh;
+}
+
+#buttons-list div:hover {
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#sidebar::-webkit-scrollbar {
+    background: #000000; 
+}
+
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(170, 169, 169); 
+}
+
+#c {
+    height: 100%;
+    width: 100%;
+}

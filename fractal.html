@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fractals</title>
+    <link rel="stylesheet" href="fractal-styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <script defer src="fractal-script-ui.js"></script>
+    <script defer src="fractal-script-webgl.js"></script>
+</head>
+<body>
+    <div id="sidebar">
+        <div class="sidebar-text">
+            <h1>The Mandelbrot Set</h1>
+            <p id="page-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit, felis ut posuere mollis, at fermentum nulla sem sit amet metus. Aenean mollis tempor purus, at tempor ante facilisis eu. 
+                <br><br>
+                Nullam semper leo nec est lacinia tempus. Morbi congue rutrum est ut volutpat. Phasellus ut commodo arcu, at auctor nisi.
+            </p>
+        </div>
+        <div class="sidebar-next-previous">
+            <button onclick="previous()"> < </button>
+            <p id="page-number">1/5</p>
+            <button onclick="next()"> > </button>
+        </div>
+        <div class="sidebar-skip">
+            <button onclick="start()"> Start </button>
+        </div>
+    </div>
+    <div class="main">
+        <canvas id="c"></canvas>
+    </div>
+</body>
+</html>
