@@ -20,10 +20,11 @@ h1 {
 
 p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding-left: 1rem;
     padding-right: 1rem;
 }
+
 #sidebar {
     color: white;
     height: 100vh;
@@ -128,6 +129,9 @@ button:hover {
     border-radius: 100vh;
 }
 
+#buttons-list div p {
+    font-size: 2rem;
+}
 #buttons-list div:hover {
     box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.1);
     background-color: rgba(255, 255, 255, 0.2);
