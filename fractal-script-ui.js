@@ -3,24 +3,46 @@ const max_page = 5;
 let page_num = document.getElementById("page-number");
 let page_text = document.getElementById("page-text");
 const pages_text = [
-    `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit, felis ut posuere mollis, at fermentum nulla sem sit amet metus. Aenean mollis tempor purus, at tempor ante facilisis eu.
+    `The mandelbrot set is a famous fractal, and an example of mathematical beauty.
     
-    Nullam semper leo nec est lacinia tempus. Morbi congue rutrum est ut volutpat. Phasellus ut commodo arcu, at auctor nisi.
-    `,
-    `test text
-    abc
-    blablablalblablabl
-    `,
-    ``,
-    ``,
-    ``
-]
+    It is an excellent example of how an intricate structure can be generated from very simple rules.
 
+    Read through the next few pages to see how it is made, or click start to view the different fractals.
+    `,
+    `From Wikipedia:
+
+    The Mandelbrot set is the set of complex numbers \\(c\\) for which the function \\(f_{c}\\left( z \\right)=z^{2}+c\\) does not diverge to infinity when iterated from \\(z=0\\), i.e., for which the sequence \\(f_{c}\\left( 0 \\right)\\), \\(f_{c}\\left(f_{c}\\left( 0 \\right)\\right)\\), etc., remains bounded in absolute value.
+    
+    So what exactly does this mean?
+    `,
+    `For every point on the complex plane, let's start with two complex numbers: 
+
+    \\(z\\), which starts at 0.
+    \\(c\\), which is the complex number for that point. 
+    
+    Now, we can take \\(z\\), and repeatedly apply the following function to it:
+
+    \\(f_{c}\\left( z \\right)=z^{2}+c\\)
+
+    If \\(z\\) diverges to infinity, then, we can colour that pixel black.
+    `,
+    `Let's say that we apply the function 10 times, and we see that \\(z\\) does not diverge to infinity, so we can colour the pixel black.
+
+    But what if it does diverge to infinity, after 100 iterations of the function? 
+
+    We can't apply the function forever, so we need a certain cutoff point. By default, this is 500 iterations.
+    `,
+    `Click start to see all the different fractals generated this way.
+    
+    Each fractal is created using a different equation.`
+]
+page_text.innerText = pages_text[page-1];
 function next() {
     if (page == max_page) return;
     page++;
     page_num.innerText = page + "/" + max_page;
     page_text.innerText = pages_text[page-1];
+    MathJax.typeset();
 }
 
 function previous() {
@@ -28,6 +50,7 @@ function previous() {
     page--;
     page_num.innerText = page + "/" + max_page;
     page_text.innerText = pages_text[page-1];
+    MathJax.typeset();
 }
 
 
