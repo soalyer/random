@@ -3,7 +3,7 @@ const max_page = 5;
 let page_num = document.getElementById("page-number");
 let page_text = document.getElementById("page-text");
 const pages_text = [
-    `The mandelbrot set is a famous fractal, and an example of mathematical beauty.
+    `The mandelbrot set is a famous fractal, and my favourite example of mathematical beauty.
     
     It is an excellent example of how an intricate structure can be generated from very simple rules.
 
@@ -57,24 +57,25 @@ function previous() {
 const fractals_list = [
     {
         "name": "Mandelbrot",
-        "equation": "f(z) = z^2 + c",
+        "equation": "\\(f_{c}\\left( z \\right)=z^{2}+c\\)",
         "iterations": 30
     },
     {
-        "name": "test",
-        "equation": "f(z) = cos(z) + c",
+        "name": "interesting fractal",
+        "equation": "\\(f_{c}\\left( z \\right)=e^{z}+c\\)",
+        "iterations": 20
+    },
+    {
+        "name": "test2",
+        "equation": "",
         "iterations": 20
     },
     {
         "name": "test3",
-        "equation": "f(z) = cos(z) + c",
-        "iterations": 20
-    },
-    {
-        "name": "test4",
-        "equation": "f(z) = cos(z) + c",
+        "equation": "",
         "iterations": 20
     }
+    
 ]
 
 function isPositiveInteger(n) {
@@ -88,10 +89,15 @@ function start() {
     for (let i = 0; i < fractals_list.length; i++) {
         let d = document.createElement("div");
         d.setAttribute("onclick","fractal("+i+");");
+        let invis = document.createElement("p");
         let b = document.createElement("p");
+        let eq = document.createElement("p");
+        invis.innerText = "";
         b.innerText = fractals_list[i].name;
+        eq.innerText = fractals_list[i].equation;
+        d.appendChild(invis);
         d.appendChild(b);
-
+        d.appendChild(eq);
         list.appendChild(d);
 
         
@@ -108,4 +114,5 @@ function start() {
             fractal(currentf);
         }
     });
+    MathJax.typeset();
 }

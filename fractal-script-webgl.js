@@ -34,12 +34,15 @@ let f = [`for (int i = 0; i < maxIt; i++) {
         break;
     }
     n += 1.0;
-}`, `for (int i = 0; i < maxIt; i++) {
-    float a = z.x * z.y + c.y;
-    z.x = z.x / z.y + c.x;
-    z.y = a;
+}`, 
+`
+float e = 2.71828183;
+for (int i = 0; i < maxIt; i++) {
+    float a = pow(e, z.x);
+    z.x = a * cos(z.y) + c.x;
+    z.y = a * sin(z.y) + c.y;
     
-    if (z.x * z.x + z.y * z.y > 4.0) {
+    if (z.x * z.x + z.y * z.y > 500.0) {
         break;
     }
     n += 1.0;
@@ -55,19 +58,17 @@ let f = [`for (int i = 0; i < maxIt; i++) {
         break;
     }
     n += 1.0;
-}`,
-`
-float e = 2.71828183;
-for (int i = 0; i < maxIt; i++) {
-    float a = pow(e, z.x);
-    z.x = a * cos(z.y) + c.x;
-    z.y = a * sin(z.y) + c.y;
+}`,`for (int i = 0; i < maxIt; i++) {
+    float a = z.x * z.y + c.y;
+    z.x = z.x / z.y + c.x;
+    z.y = a;
     
-    if (z.x * z.x + z.y * z.y > 500.0) {
+    if (z.x * z.x + z.y * z.y > 4.0) {
         break;
     }
     n += 1.0;
-}`];
+}`
+];
 let currentf = 0;
 let maxIter = 500;
 function fractal(i) {

@@ -129,7 +129,16 @@ button:hover {
     border-radius: 100vh;
 }
 
+#buttons-list div {
+    display: flex;
+    flex-direction: column;
+}
 #buttons-list div p {
+    font-size: 1rem;
+    margin: 0.5rem; 
+}
+
+#buttons-list div p:nth-child(2) {
     font-size: 2rem;
 }
 #buttons-list div:hover {
