@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour picker</title>
+    <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+    <script src="Colour.js"></script>
+    <script src="colours-script.js"></script>
+    <link rel="stylesheet" href="colours-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Do you know your colours?</h1>
+    <h2>Select <span id="colour-name"></span> on the colour wheel</h2>
+    <div id="picker-container">
+        <div id="picker"></div>
+        <div id="colour"></div>
+    </div>
+    <button onclick="select()">Select</button>
+
+    <div id="modal">
+        <h1 id="modal-title">Good job!</h1>
+        <div id="colour-comparison">
+            <div class="colour-name-container">
+                <h2 id="colour-name-after">efwjij</h2>
+                <div id="real-colour"></div>
+            </div>
+            <div class="colour-name-container"> 
+                <h2>your guess:</h2>
+                <div id="guess-colour"></div>
+            </div>
+        </div>
+        <button onclick="try_again()">Try again</button>
+    </div>
+</body>
+</html>

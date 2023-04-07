@@ -1,0 +1,93 @@
+html {
+    font-family: 'Work Sans', sans-serif;
+    
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
+    background-attachment: fixed;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 0;
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+h2 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 400;
+}
+#picker-container {
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+}
+#colour {
+    height: 20vw;
+    width: 20vw;
+    background-color: red;
+    border-radius: 1vw;
+}
+
+#colour-name {
+    font-weight: 700;
+}
+
+button {
+    background-image: linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%);
+    margin-top: 2vw;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;      
+    font-family: 'Work Sans', sans-serif;
+    font-size: 2vw;
+    font-weight: 400;
+    box-shadow: 0 0 5px #d1d1d1;
+    border-radius: 1vw;
+    width: 20vw;
+    height: 5vw;
+  }
+
+button:hover {
+    background-position: right center; 
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    align-items: center;
+    flex-direction: column;
+    background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
+    background-attachment: fixed;
+}
+
+#colour-comparison {
+    display: flex;
+    flex-direction: row;
+    gap: 10vw;
+}
+
+#real-colour, #guess-colour {
+    width: 20vw;
+    height: 20vw;
+    background-color: red;
+    border-radius: 1vw;
+}
+
+.colour-name-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
