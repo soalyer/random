@@ -120,25 +120,31 @@ button:hover {
     #colour {
         height: max(3vh, min(calc(100vh - 160vw), 60vw));
         width: 60vw;
+        border-radius: 3vw;
     }
 
     button {
-        position: absolute;
-        top: calc(100vh - 25vw);
         width: 80vw;
-        height: 20vw;
+        height: 15vw;
         font-size: 8vw;
     }
 
     #colour-comparison {
         display: flex;
         flex-direction: column;
-        gap: 10vw;
+        gap: 0vw;
     }
 
     #real-colour, #guess-colour {
         width: 60vw;
-        height: 60vw;
-        gap: 2vw;
+        height: max(3vh, min(calc(40vh - 20vw), 60vw));
+        border-radius: 3vw;
+    }
+
+    #modal h1 {
+        font-size: 8vw;
+    }
+    .colour-name-container h2 {
+        font-size: 5vw;
     }
 }
