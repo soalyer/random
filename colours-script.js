@@ -5,7 +5,7 @@ fetch('color.names.rgbonly.txt')
   .then(text => lines = text.split('\n'))
   .then(text => setColour())
 var colorPicker = new iro.ColorPicker("#picker", {
-    width: window.innerWidth * 0.20,
+    width: window.innerWidth <= 850 ? window.innerWidth * 0.60 : window.innerWidth * 0.20,
     color: "#f00"
   });
 colorPicker.on('color:change', function(color) {
