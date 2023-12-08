@@ -11,6 +11,7 @@ websites = [
     new Website("Mandelbrot", "https://soalyer.github.io/random/fractal", "fractal.png"),
     new Website("Find the emoji", "https://soalyer.github.io/random/emoji", "emoji.png"),
     new Website("Search algorithm", "https://soalyer.github.io/random/search", "search.png"),
+    new Website("Color guesser", "https://soalyer.github.io/random/colours", "colours.png"),
     new Website("Maze generator", "https://soalyer.github.io/random/maze", "maze.png"),
     new Website("Icosahedron", "http://soalyer.github.io/random/icosahedron", "icosahedron.png"),
     new Website("Buffon's needle", "https://soalyer.github.io/random/buffon", "buffon.png"),
