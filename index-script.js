@@ -16,6 +16,7 @@ websites = [
     new Website("Icosahedron", "http://soalyer.github.io/random/icosahedron", "icosahedron.png"),
     new Website("Buffon's needle", "https://soalyer.github.io/random/buffon", "buffon.png"),
     new Website("Bogosort", "https://soalyer.github.io/random/bogo", "bogo.png"),
+    new Website("Emoji game", "https://soalyer.itch.io/silly-emoji-game?secret=PhUXSwYwQofBvJhedeu6Jlafp0o", "emoji-game.png")
 ];
 
 project_container = document.getElementById("projects");
