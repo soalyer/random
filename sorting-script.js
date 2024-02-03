@@ -100,6 +100,8 @@ function switchHighlight() {
     highlightSwapped = document.getElementById("highlight-check").checked;
 }
 function drawGraph(array, rA = -1, rB = -1) {
+    console.log(ctx);
+    console.log("RAHH")
     ctx.fillStyle = primary;
     ctx.fillRect(0,0,1080,720);
     let unit = 1080 / (array.length * 2 + 1)
@@ -108,7 +110,6 @@ function drawGraph(array, rA = -1, rB = -1) {
         ctx.fillStyle = secondary;
         if (highlightSwapped && (i == rA || i == rB)) {
             ctx.fillStyle = "red";
-            console.log(ctx.fillStyle)
         }
         ctx.fillRect(x,710,unit*1.66,-unit*1.33*array[i])
         x += unit*2
