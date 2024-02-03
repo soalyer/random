@@ -1,0 +1,357 @@
+:root {
+    --text: #F5F1ED;
+    --background: #090604;
+    --primary: #DCB990;
+    --secondary: #895920;
+    --accent: #E1953B;
+}
+html {
+    overscroll-behavior: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+div, button, input {
+    border-radius: 1vw;
+}
+#master {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 1vw;
+}
+
+
+#sidebar-container {
+    overflow: hidden;
+}
+
+#sidebar {
+    width: 14vw;
+    height: 70vh;
+    background-color: var(--secondary); 
+    font-size: 30px;
+    overflow-y: scroll;
+    position: relative;
+   
+}
+
+::-webkit-scrollbar {
+    width: 0.4vw;
+}
+
+::-webkit-scrollbar-track {
+    background: none; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3); 
+}
+#sidebar > button {
+    margin-top: 1vw;
+    margin-bottom: 0;
+    margin-left: 1vw;
+    width: 12vw;
+    height: 8vh;
+    border: 0;
+    box-shadow: none;
+    background: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 3vh;
+    outline: medium solid rgba(255, 255, 255, 0.2);
+}
+
+#sidebar > button:hover {
+    color: rgba(255, 255, 255, 0.9);
+    outline: medium solid rgba(255, 255, 255, 0.4);
+}
+
+#main {
+    width: 50vw;
+    height: 80vh;
+    gap: 1vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#graph {
+    width: 50vw;
+    height: calc(60vh - 1vw);
+    background-color: var(--primary);
+    box-shadow: 0.5vw 0.5vw rgba(0, 0, 0, 0.5),0.5vw 0.5vw var(--primary);
+}
+
+#button-bar {
+    width: 50vw;
+    height: 20vh;
+    display: flex;
+    gap: 1vw;
+}
+
+#settings {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    gap: 1vw;
+}
+
+#speed, #count {
+    background-color: none;
+    outline: medium solid dimgray;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    font-size: 5vh;
+    color: dimgray;
+}
+
+input {
+    border: 0;
+    box-shadow: none;
+    background-color: dimgray;
+    font-size: 5vh;
+    text-align: center;
+    color: var(--text);
+}
+#shuffle, #sort {
+    border: 0;
+    box-shadow: none;
+    height: 20vh;
+    width: 20vh;
+    color: rgba(0, 0, 0, 0.54);
+   
+    
+}
+
+#shuffle > span, #sort > span {
+    font-size: 15vh;
+    position: relative;
+    top: 0.5vh;
+}
+
+#sort > span {
+    right: 0.6vh;
+}
+
+#shuffle {
+    background-color: rgb(167, 167, 167);
+    box-shadow: 0.5vw 0.5vw rgba(0, 0, 0, 0.5),0.5vw 0.5vw rgb(167, 167, 167);
+    
+}
+#sort {
+    background-color: var(--accent);
+    box-shadow: 0.5vw 0.5vw rgba(0, 0, 0, 0.5),0.5vw 0.5vw var(--accent);
+}
+
+#canvas {
+    width: 100%;
+    height: 100%;
+    border-radius: 1vw;
+}
+
+#tooltip {
+    color: rgba(255, 255, 255, 0.2);
+    cursor: default;
+    margin-top: -3vh;
+    font-size: 2vh;
+}
+
+#tooltip-text {
+    opacity: 0;
+    transition: opacity 0s;
+    width: 20vh;
+    height: 4vh;
+    border-radius: 1vh;
+    font-size: 1.5vh;
+    background-color: black;
+    color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    margin-left: -11.5vh;
+    margin-top: -8vh;
+    z-index: 1;
+    font-family: 'Poppins', sans-serif;
+    padding: 1vh;
+}
+#tooltip:hover #tooltip-text {
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+
+#tooltip-text {
+    pointer-events: none;
+}
+
+#extra-settings {
+    position: absolute;
+    right: 1vw;
+    bottom: 1vw;
+    color: rgba(255, 255, 255, 0.1);
+    cursor: default;
+}
+
+#settings-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+#modal-content {
+    padding: 1vw;
+    gap: 2vw;
+    font-size: 2vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color:rgba(128,128,128,0.95);
+    margin: auto;
+    margin-top: 10vh;
+    width: 60%;
+    height: 60%;
+}
+
+#color-buttons {
+    width: 100%;
+    height: 5vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#color-buttons > button {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 5vw !important;
+    outline-style: solid;
+    outline-width: 0.5vw;
+    border: 0;
+    box-shadow: none;
+}
+
+#highlight-swapped {
+    position: relative;
+    display: inline-block;
+    height: 6vh;
+    width: 10vh;
+}
+
+#highlight-container {
+    display: flex;
+    gap: 2vh;
+}
+
+#highlight-swapped input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+#highlight-swapped-label {
+    color:white;
+    font-size: min(2.5vw, 4vh);
+}
+
+#slider {
+    position: absolute;
+    cursor: pointer;
+    border-radius: 6vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+#slider:before {
+    position: absolute;
+    content: "";
+    height: 4.5vh;
+    width: 4.5vh;
+    left: 0.75vh;
+    bottom: 0.75vh;
+    border-radius: 50%;
+    z-index: 1;
+    background-color: white;
+    transition: .4s;
+}
+
+#highlight-swapped input:checked + #slider {
+    background-color: var(--accent);
+}
+  
+#highlight-swapped input:focus + #slider {
+    box-shadow: 0 0 1px var(--accent);
+}
+
+#highlight-swapped input:checked + #slider:before {
+    transform: translateX(4vh);
+}
+
+button:hover {
+    filter: brightness(120%);
+}
+@media (orientation: portrait) {
+    #master {
+        flex-direction: column;
+    }
+    
+    #sidebar {
+        width: 80vw;
+        height: 14vh;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        display: flex;
+    }
+
+    #sidebar > button {
+        margin-top: 0;
+        margin-left: 2vw;
+        margin-bottom: 0;
+        width: 30vw;
+        height: 12vh;
+    }
+    #main {
+        width: 80vw;
+    }
+    #graph {
+        width: 80vw;
+    }
+    #button-bar {
+        width: 80vw;
+    }
+    #shuffle, #sort {
+        max-width: 30vw;
+    }
+    #speed, #count {
+        flex-direction: column;
+    }
+    label {
+        font-size: 4vw;
+    }
+
+    input {
+        font-size: 6vw;
+    }
+    .icon {
+        display: none;
+    }
+}
