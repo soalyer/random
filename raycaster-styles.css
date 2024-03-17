@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    overflow-y: hidden;
+
+    background-image: url('data:image/svg+xml,<svg id="visual" viewBox="0 0 960 540" width="960" height="540" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect x="0" y="0" width="960" height="540" fill="%23272023"></rect><path d="M0 142L137 201L274 211L411 136L549 118L686 189L823 171L960 202L960 541L823 541L686 541L549 541L411 541L274 541L137 541L0 541Z" fill="%23473d41"></path><path d="M0 272L137 234L274 223L411 314L549 184L686 246L823 294L960 284L960 541L823 541L686 541L549 541L411 541L274 541L137 541L0 541Z" fill="%2342373b"></path><path d="M0 262L137 273L274 297L411 271L549 337L686 365L823 300L960 310L960 541L823 541L686 541L549 541L411 541L274 541L137 541L0 541Z" fill="%233d3136"></path><path d="M0 358L137 436L274 418L411 351L549 403L686 332L823 347L960 416L960 541L823 541L686 541L549 541L411 541L274 541L137 541L0 541Z" fill="%23382b30"></path><path d="M0 470L137 410L274 444L411 419L549 436L686 463L823 434L960 423L960 541L823 541L686 541L549 541L411 541L274 541L137 541L0 541Z" fill="%2333262b"></path></svg>');
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-size: 6vw;
+    margin-top: 4vh;
+}
+
+p {
+    color: gray;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1vw;
+}
+#canvas-container {
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+}
+
+canvas {
+    width: 35vw;
+}
+
+@media (orientation: portrait) {
+    #canvas-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    canvas {
+        width: 40vh;
+    }
+    
+  }
+
+
+#slidecontainer {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+#slider {
+    -webkit-appearance: none;
+    width: 20vw;
+    height: 1vw;
+    background: black;
+    border-radius: 1vw;
+}
+
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: dimgray;
+    border-radius: 50%;
+    cursor: pointer;
+  }
